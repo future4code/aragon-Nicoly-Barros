@@ -1,0 +1,64 @@
+### Endpoint de teste
+GET http://localhost:3003/ping
+
+
+
+### Endpoint: get all classrooms or classroom by name
+GET http://localhost:3003/classrooms?search=
+
+
+
+### Enspoint: create classroom
+POST http://localhost:3003/classrooms
+Content-Type: application/json
+
+{
+    "name": "Turma Test 2",
+    "module": "4"
+}
+
+
+
+### Endpoint: get all classrooms actives
+GET http://localhost:3003/classrooms/actives
+
+
+
+### Endpoint: update module classroom
+PUT http://localhost:3003/classrooms/101
+Content-Type: application/json
+
+{
+    "module": "4"
+}
+
+
+
+### Endpoint: get all students or student by name
+GET http://localhost:3003/students?search=
+
+
+
+### Endpoint: create student
+POST http://localhost:3003/students
+Content-Type: application/json
+
+{
+    "name": "Joaquim",
+    "email": "joaquim@gmail.com",
+    "birthdate": "2000/01/03",
+    "classroom_id": "103"
+}
+
+
+### Endpoint: update classroom_id student
+
+PUT http://localhost:3003/students/1
+Content-Type: application/json
+
+{
+    "classroom_id": "102"
+}
+
+### fimmm
+GET http://localhost:3003/classrooms/103
