@@ -1,0 +1,40 @@
+### Endpoint de teste
+GET http://localhost:3003/ping
+
+
+### Signup
+POST http://localhost:3003/signup
+Content-Type: application/json
+
+{
+    "nickname": "nicklab",
+    "email": "nicoly@labenu.com",
+    "password": "nick123"
+}
+
+### Login
+POST http://localhost:3003/login
+Content-Type: application/json
+
+{
+    "email": "nicoly@labenu.com",
+    "password": "nicoly123"
+}
+
+### Get all users (protected)
+GET http://localhost:3003/users?search=lu
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZTU4ZDY0LWM3NWUtNGE5My05ZDc5LTYzNGQxYmFhMzIxNCIsImlhdCI6MTY1OTM3MzQwOCwiZXhwIjoxNjU5NDU5ODA4fQ.xUbIIRvTxGOb-gg7EMQYnCj4LQidfqijrkrCjcNrXV4
+
+### Edit dados (protected)
+PUT http://localhost:3003/users?search=lu
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZTU4ZDY0LWM3NWUtNGE5My05ZDc5LTYzNGQxYmFhMzIxNCIsImlhdCI6MTY1OTM3MzQwOCwiZXhwIjoxNjU5NDU5ODA4fQ.xUbIIRvTxGOb-gg7EMQYnCj4LQidfqijrkrCjcNrXV4
+Content-Type: application/json
+
+{
+    "nickname": "Nih",
+    "email": "nick@labenu.com",
+    "password": 
+}
+
+### Delete user
+DELETE http://localhost:3003/users/7079b8e4-95cd-48aa-82a9-77454e94b789
