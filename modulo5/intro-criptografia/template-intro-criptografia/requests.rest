@@ -1,0 +1,39 @@
+### Endpoint de teste
+GET http://localhost:3003/ping
+
+
+### Signup
+POST http://localhost:3003/signup
+Content-Type: application/json
+
+{
+    "nickname": "Nick",
+    "email": "nicoly@email.com",
+    "password": "nicoly123"
+}
+
+### Login
+POST http://localhost:3003/login
+Content-Type: application/json
+
+{
+    "email": "astrodev@gmail.com",
+    "password": "bananinha"
+}
+
+### Get all users (protected)
+GET http://localhost:3003/users?search=
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJmYTU0OTkxLTExMzctNGI0ZS1iMmFlLTFmMTQwMGVkZjgyMSIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NTk0NTY5ODIsImV4cCI6MTY1OTU0MzM4Mn0.ICDCCpDWu4eNL1VWTuoPiJgB94PH4ci_l2-U9UyhapI
+
+### Edit user (protected)
+PUT http://localhost:3003/users/2fa54991-1137-4b4e-b2ae-1f1400edf821
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJmYTU0OTkxLTExMzctNGI0ZS1iMmFlLTFmMTQwMGVkZjgyMSIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NTk0NTY5ODIsImV4cCI6MTY1OTU0MzM4Mn0.ICDCCpDWu4eNL1VWTuoPiJgB94PH4ci_l2-U9UyhapI
+Content-Type: application/json
+
+{
+    "nickname": "yuzo"
+}
+
+### Delete user (protected)
+DELETE http://localhost:3003/users/bda218a7-04c1-47f7-b7d2-cd99147c2e93
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJmYTU0OTkxLTExMzctNGI0ZS1iMmFlLTFmMTQwMGVkZjgyMSIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NTk0NTY5ODIsImV4cCI6MTY1OTU0MzM4Mn0.ICDCCpDWu4eNL1VWTuoPiJgB94PH4ci_l2-U9UyhapI
